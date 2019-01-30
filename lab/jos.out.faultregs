@@ -1,0 +1,54 @@
++ ld obj/kern/kernel
++ mk obj/kern/kernel.img
+c[?7l[2J[0mSeaBIOS (version rel-1.11.2-0-gf9626ccb91-prebuilt.qemu-project.org)
+
+
+iPXE (http://ipxe.org) 00:03.0 C980 PCI2.10 PnP PMM+07F91530+07EF1530 C980
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Hard Disk..
+6828 decimal is 15254 octal!
+Physical memory: 131072K available, base = 640K, extended = 130432K
+check_page_free_list() succeeded!
+check_page_alloc() succeeded!
+check_page() succeeded!
+check_kern_pgdir() succeeded!
+check_page_free_list() succeeded!
+check_page_installed_pgdir() succeeded!
+SMP: CPU 0 found 1 CPU(s)
+enabled interrupts: 1 2
+[00000000] new env 00001000
+4096------
+4096------
+fault va : 400000
+       before   during  
+edi    00000000 00000000 OK
+esi    00000000 00000000 OK
+ebp    eebfdfd0 eebfdfd0 OK
+ebx    00000000 00000000 OK
+edx    00001000 00001000 OK
+ecx    00801344 00801344 OK
+eax    008003e4 008003e4 OK
+eip    00800522 00800522 OK
+eflags 000008d7 000008d7 OK
+esp    eebfdfb8 eebfdfb8 OK
+Registers in UTrapframe OK
+       before   after   
+edi    00000000 00000000 OK
+esi    00000000 00000000 OK
+ebp    eebfdfd0 eebfdfd0 OK
+ebx    00000000 00000000 OK
+edx    00001000 00001000 OK
+ecx    00801344 00801344 OK
+eax    008003e4 008003e4 OK
+eip    00800522 00800522 OK
+eflags 000008d7 00000086 MISMATCH
+esp    eebfdfb8 eebfdfb8 OK
+Registers after page-fault MISMATCH
+[00001000] exiting gracefully
+[00001000] free env 00001000
+kernel panic on CPU 0 at kern/env.c:541: PADDR called with invalid kva 00000000
+Welcome to the JOS kernel monitor!
+Type 'help' for a list of commands.
+qemu-system-i386: terminating on signal 15 from pid 25521 (make)
